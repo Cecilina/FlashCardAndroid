@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:gravity="top|center|fill"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+    android:visibility="visible"
+    tools:context="com.myfalshcard.flashcardgame.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_above="@+id/textView2"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/midfont" >
+
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="70sp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+            android:background="@color/yellow"
+            android:clickable="true"
+    		android:textColor="@color/yellow"
+            android:contentDescription="@string/Guess1"
+            android:onClick="onClickListener"
+            android:src="@drawable/abc_ab_solid_light_holo"
+            android:text="@string/Guess1" />
+
+        <Button
+            android:id="@+id/Button2"
+            android:layout_width="70sp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+   			android:textColor="@color/yellow"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:contentDescription="@string/Guess2"
+            android:onClick="onClickListener"
+            android:src="@drawable/abc_ab_solid_light_holo"
+            android:text="@string/Guess2" />
+
+        <Button
+            android:id="@+id/Button3"
+            android:layout_width="70sp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+           	android:textColor="@color/yellow"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:contentDescription="@string/Guess3"
+            android:onClick="onClickListener"
+            android:src="@drawable/abc_ab_solid_light_holo"
+            android:text="@string/Guess3" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_alignLeft="@+id/textview1"
+        android:layout_marginLeft="53dp"
+        android:background="@color/red"
+        android:clickable="true"
+        android:onClick="onResetLinstener"
+        android:text="@string/reset" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="130sp"
+        android:layout_height="140sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5sp"
+        android:layout_marginLeft="21dp"
+        android:background="@color/grey"
+        android:clickable="false"
+        android:gravity="center"
+        android:paddingBottom="@dimen/largefont"
+        android:paddingTop="@dimen/largefont"
+        android:text="@string/flashcard1"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/midfont"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="130sp"
+        android:layout_height="140sp"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_margin="5sp"
+        android:layout_toRightOf="@+id/textView2"
+        android:background="@color/grey"
+        android:clickable="false"
+        android:gravity="center"
+        android:paddingBottom="@dimen/largefont"
+        android:paddingTop="@dimen/largefont"
+        android:text="@string/flashcard2"
+        android:textColor="@color/purple"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="300sp"
+        android:layout_height="100sp"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginBottom="18dp"
+        android:layout_toRightOf="@+id/textView3"
+        android:background="@color/white"
+        android:clickable="false"
+        android:padding="@dimen/midfont"
+        android:text="@string/result"
+        android:textAlignment="center"
+        android:textSize="@dimen/midfont" />
+
+</RelativeLayout>

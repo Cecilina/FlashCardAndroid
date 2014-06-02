@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlashCardGame</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="result">You Final Result</string>
+    <string name="flashcard1">1st FlashCard</string>
+    <string name="flashcard2">2nd FlashCard</string>
+    <string name="Guess1">First</string>
+    <string name="Guess2">Second</string>
+    <string name="Guess3">Third</string>
+    <string name="reset">Reset</string>
+
+</resources>
