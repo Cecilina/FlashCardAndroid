@@ -8,5 +8,23 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
+    <item 
+        android:id = "@+id/addition"
+        android:title = "@string/addition"
+        android:titleCondensed="Add"/>
+    <item android:id="@+id/subtract"
+        android:title="@string/subtract"
+        android:titleCondensed="Sub"/>
+    <item android:id="@+id/multiplication"
+        android:title = "@string/multiplication"
+        android:titleCondensed="Multiply"/>
+    <item
+        android:id = "@+id/division"
+        android:title= "@string/division"
+        android:titleCondensed="Div" />
+    <item 
+        android:id = "@+id/mode"
+        android:title= "@string/mode"
+        android:titleCondensed="Mod"/>
 
 </menu>

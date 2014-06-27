@@ -9,6 +9,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
@@ -33,13 +35,14 @@ public class MainActivity extends Activity {
 	private static int resultSum;
 	private static String st;
     private static Random randomNumber = new Random();
-    static Button btn1;
-	static Button btn2;
-	static Button btn3;
-	static Button btn4;
-    static TextView resultText;
-	static TextView resultText2;
-	static TextView resultText3;
+    private static Button btn1;
+	private static Button btn2;
+	private static Button btn3;
+	private static Button btn4;
+    private static TextView resultText;
+	private static TextView resultText2;
+	private static TextView resultText3;
+	private static int operator;
 	static int i = 0;
     private static Boolean checked;
     @Override
@@ -66,7 +69,20 @@ public class MainActivity extends Activity {
         
          resultText3 = (TextView) findViewById(R.id.textView3);
          
-         btn1 = (Button) findViewById(R.id.Button1);
+        
+
+    }
+    
+    public boolean onCreateOptionsMenu(Menu menu){
+    	getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+    	
+    }
+    
+    
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+    	operator = menuItem.getItemId();
+    	 btn1 = (Button) findViewById(R.id.Button1);
          btn2 = (Button) findViewById(R.id.Button2);
          btn3 = (Button) findViewById(R.id.Button3);
          btn4 = (Button) findViewById(R.id.button4);
@@ -122,7 +138,10 @@ public class MainActivity extends Activity {
   		});
    
 
-
+    	
+    	return true;
+		
+    	
     }
    
     @SuppressLint("ResourceAsColor")
@@ -173,8 +192,34 @@ public class MainActivity extends Activity {
         text1.setText(Integer.toString(text1Integer));
         int text2Integer = randomNumber.nextInt(9);
         text2.setText(Integer.toString(text2Integer));
-        return (text1Integer+text2Integer);
+        
+        switch(operator){
+        case R.id.addition:
+        	return (text1Integer+text2Integer);
+        case R.id.subtract:
+        	return (text1Integer-text2Integer);
+        case R.id.multiplication:
+        	return (text1Integer*text2Integer);
+        case R.id.division:
+        	text2Integer = tranformZerotoNon0(text2Integer);
+        	text2.setText(Integer.toString(text2Integer));
+        	return (text1Integer/text2Integer);
+        case R.id.mode:
+        	text2Integer =tranformZerotoNon0(text2Integer);
+        	text2.setText(Integer.toString(text2Integer));
+        	return (text1Integer%text2Integer);
+        	default:
+        		return (text1Integer+text2Integer);	
+        }
+      
     }
+    
+    private static int tranformZerotoNon0(int text2Integer) {
+  		while(text2Integer == 0){
+  			text2Integer = randomNumber.nextInt(9);
+  		}
+  		return text2Integer;
+  	}
     
     public static void buttonRandom(Button btn1, Button btn2, Button btn3, int sum){
     	int randNum = randomNumber.nextInt(2);

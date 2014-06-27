@@ -11,5 +11,10 @@
     <string name="Guess2">Second</string>
     <string name="Guess3">Third</string>
     <string name="reset">Reset</string>
+    <string name="addition">Addition</string>
+    <string name="multiplication">Multiplication</string>
+    <string name="subtract">Subtract</string>
+    <string name="division">Division</string>
+    <string name="mode">Mode</string>
 
 </resources>
