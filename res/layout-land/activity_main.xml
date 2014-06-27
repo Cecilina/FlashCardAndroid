@@ -12,7 +12,7 @@
     android:scrollbarStyle="insideOverlay"
     android:scrollbars="vertical"
     android:visibility="visible"
-    tools:context="com.myfalshcard.flashcardgame.MainActivity" >
+    tools:context="com.myfalshcard.flashcardgameOptionMenu.MainActivity" >
 
     <LinearLayout
         android:id="@+id/linearLayout1"

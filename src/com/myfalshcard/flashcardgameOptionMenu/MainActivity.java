@@ -1,6 +1,8 @@
-package com.myfalshcard.flashcardgame;
+package com.myfalshcard.flashcardgameOptionMenu;
 
 import java.util.Random;
+
+import com.myfalshcard.flashcardgameOptionMenu.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
